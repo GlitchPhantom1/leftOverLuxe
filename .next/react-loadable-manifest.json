@@ -1,0 +1,10 @@
+{
+  "app/page.tsx -> ../components/Home": {
+    "id": 1670,
+    "files": [
+      "static/chunks/4b1a69f1.afddfc70926e0636.js",
+      "static/chunks/421.9016748914e20ad7.js",
+      "static/chunks/670.f2ecc941c6faabf7.js"
+    ]
+  }
+}

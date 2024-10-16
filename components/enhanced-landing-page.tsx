@@ -9,12 +9,17 @@ import { Pizza, DollarSign, Truck, ThumbsUp, ArrowRight, Menu, X } from "lucide-
 import Link from "next/link"
 import { motion } from "framer-motion"
 import RetroGrid from "@/components/ui/retro-grid";
-import { Spotlight } from "@/components/ui/spotlight";
+import { useNavigate } from 'react-router-dom';
 
 export const EnhancedLandingPageComponent = ({ windowWidth }: { windowWidth: number }) => {
   const isMobile = windowWidth < 768;
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate('/order');
+  };
+
   const reviews = [
     {
       name: "Jack",
@@ -165,7 +170,7 @@ const ReviewCard = ({
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
+                <Button onClick={handleRedirect} size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
                   Order Now
                 </Button>
                 <Button size="lg" variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-900">
